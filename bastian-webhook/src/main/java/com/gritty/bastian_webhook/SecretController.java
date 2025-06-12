@@ -14,8 +14,7 @@ public class SecretController {
     @PostMapping("/api/receive-secret")
     public ResponseEntity<String> receiveSecret(
             @RequestPart("file") MultipartFile file,
-            @RequestParam("target") String target,
-            @RequestHeader("X-Auth-Token") String token
+            @RequestParam("target") String target
     ) {
 
         try {
