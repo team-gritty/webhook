@@ -20,13 +20,13 @@ public class SecretController {
         try {
             // 내부 서비스로 파일 전달
             String internalUrl = switch (target) {
-                case "discovery-service" -> " http://10.0.0.1:8080/api/receive-secret";
-                case "integration-service" -> "http://10.0.0.2:8080/api/receive-secret";
-                case "admin-integration-service" -> "http://10.0.0.3:8080/api/receive-secret";
-                case "payment-service" -> "http://10.0.0.4:8080/api/receive-secret";
-                case "subscribe-service" -> "http://10.0.0.5:8080/api/receive-secret";
-                case "chatbot-service" -> "http://10.0.0.6:8080/api/receive-secret";
-                case "chat-service" -> "http://10.0.0.7:8080/api/receive-secret";
+                case "discovery-service" -> " http://10.0.2.6:8888/api/receive-secret";
+                case "integration-service" -> "http://10.0.2.9:8888/api/receive-secret";
+                case "admin-integration-service" -> "http://10.0.2.10:8888/api/receive-secret";
+                case "payment-service" -> "http://10.0.2.11:8888/api/receive-secret";
+                case "subscribe-service" -> "http://10.0.2.12:8888/api/receive-secret";
+                case "chatbot-service" -> "http://10.0.2.8:8888/api/receive-secret";
+                case "chat-service" -> "http://10.0.2.7:8888/api/receive-secret";
                 default -> null;
             };
 

@@ -45,13 +45,13 @@ public class ResponseController {
             // ✅ 3. 변경된 폴더에 따라 각기 다른 서버로 웹훅 전달
             for (String pkg : affectedPackages) {
                 String targetUrl = switch (pkg) {
-                    case "discovery-service" -> " http://10.0.0.1:8080/webhook/github";
-                    case "integration-service" -> "http://10.0.0.2:8080/webhook/github";
-                    case "admin-integration-service" -> "http://10.0.0.3:8080/webhook/github";
-                    case "payment-service" -> "http://10.0.0.4:8080/webhook/github";
-                    case "subscribe-service" -> "http://10.0.0.5:8080/webhook/github";
-                    case "chatbot-service" -> "http://10.0.0.6:8080/webhook/github";
-                    case "chat-service" -> "http://10.0.0.7:8080/webhook/github";
+                    case "discovery-service" -> " http://10.0.2.6:8888/webhook/github";
+                    case "integration-service" -> "http://10.0.2.9:8888/webhook/github";
+                    case "admin-integration-service" -> "http://10.0.0.10:8888/webhook/github";
+                    case "payment-service" -> "http://10.0.2.11:8888/webhook/github";
+                    case "subscribe-service" -> "http://10.0.2.12:8888/webhook/github";
+                    case "chatbot-service" -> "http://10.0.2.8:8888/webhook/github";
+                    case "chat-service" -> "http://10.0.2.7:8888/webhook/github";
                     default -> null;
                 };
 

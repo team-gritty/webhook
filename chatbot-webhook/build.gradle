@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.5.0'
+	id 'org.springframework.boot' version '3.1.5'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -18,19 +18,22 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter:2.7.18'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.18'
+	implementation 'org.springframework:spring-core:5.3.33'
+	implementation 'org.springframework:spring-web:5.3.33'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	// RestTemplate, HttpEntity, MediaType
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-
-	// MultiValueMap, LinkedMultiValueMap
-	implementation 'org.springframework:spring-web'
-
-	// FileSystemResource
-	implementation 'org.springframework:spring-core'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+configurations.all {
+	resolutionStrategy {
+		force 'org.springframework:spring-core:5.3.33'
+		force 'org.springframework:spring-web:5.3.33'
+	}
 }
