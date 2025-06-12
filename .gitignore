@@ -1,0 +1,42 @@
+# Mac OS
+.DS_Store
+
+# IntelliJ
+*.iml
+.idea/
+out/
+
+# Logs
+logs/
+*.log
+
+# Build
+/build/
+/target/
+
+# Gradle
+.gradle/
+/build/
+
+# Maven
+target/
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+
+# Temp files
+*.swp
+*.swo
+*~
+
+# VS Code (혹시 쓰는 경우)
+.vscode/
+
+# 환경 변수 설정 파일 등
+.env
+*.properties
+*.yml
+/.idea/
+*.iml
