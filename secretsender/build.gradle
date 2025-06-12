@@ -21,6 +21,24 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// RestTemplate, HttpEntity, MediaType
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// MultiValueMap, LinkedMultiValueMap
+	implementation 'org.springframework:spring-web'
+
+	// FileSystemResource
+	implementation 'org.springframework:spring-core'
+
+	// JUnit 5
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+
+	// Spring Test (선택적, @Test 쓸 때 유용)
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework:spring-web'
+	testImplementation 'org.springframework:spring-core'
 }
 
 tasks.named('test') {

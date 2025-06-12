@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+# 모든 하위 폴더의 secret, yml 무시
+src/test/resources/**/application-secret.properties
+src/test/resources/**/application.yml
