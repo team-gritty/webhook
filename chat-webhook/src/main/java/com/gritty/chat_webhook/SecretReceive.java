@@ -17,8 +17,7 @@ public class SecretReceive {
     public ResponseEntity<String> saveSecretFile(@RequestPart("file") MultipartFile file) {
         try {
             // 원하는 저장 경로 지정
-            //파일 경로 예시 : /home/project/linki/admin-integratin/src/main/resources/
-            String filePath ="나중에 파일 경로 지정 ";
+            String filePath ="/home/project/linki/chat-service/src/main/resources/";
             File dest = new File(filePath + file.getOriginalFilename());
             file.transferTo(dest);
             return ResponseEntity.ok("파일 저장 완료: " + dest.getAbsolutePath());
