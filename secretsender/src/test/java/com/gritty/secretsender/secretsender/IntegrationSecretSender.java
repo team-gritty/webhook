@@ -21,7 +21,7 @@ public class IntegrationSecretSender {
         String url = config.get("secret").get("url").asText();
 
         SecretFileSender.sendSecret(
-                "src/test/resources/integration/application.yml",
+                "src/test/resources/integration/application-secret.properties",
                 "integration-service",
                 url
         );
