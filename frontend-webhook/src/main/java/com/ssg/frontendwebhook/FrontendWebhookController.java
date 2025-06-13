@@ -16,7 +16,7 @@ public class FrontendWebhookController {
     public ResponseEntity<String> deploy(@RequestBody Map<String, Object> payload) {
         try {
             String ref = (String) payload.get("ref");
-            if (!"refs/heads/dev".equals(ref)) {
+            if (!"refs/heads/main".equals(ref)) {
                 return ResponseEntity.ok("✅ dev 브랜치가 아니므로 무시됨");
             }
 
